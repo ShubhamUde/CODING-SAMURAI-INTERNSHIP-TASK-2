@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="16dp"
+    android:layout_height="match_parent"
+    tools:context=".NoteDetailsActivity">
+
+
+    <TextView
+        android:id="@+id/addNewNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="Add New Note"
+        android:layout_marginTop="20dp"
+        android:textSize="24sp"
+        android:textColor="@color/txt_color"/>
+
+    <ImageView
+        android:id="@+id/note_save_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_done_24"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/addNewNote"
+        android:layout_marginEnd="16dp"
+        android:importantForAccessibility="no" />
+
+    <EditText
+        android:id="@+id/note_title_txt"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="Title"
+        android:padding="12dp"
+        android:inputType="textMultiLine"
+        android:textSize="20sp"
+        android:layout_below="@id/addNewNote"
+        android:background="@drawable/gray_bordes"
+        android:layout_marginTop="16dp"
+        android:maxLines="1"
+        tools:ignore="Autofill" />
+
+    <EditText
+        android:id="@+id/note_content_txt"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:hint="Start typing"
+        android:padding="12dp"
+        android:gravity="top"
+        android:inputType="textMultiLine"
+        android:textSize="18sp"
+        android:layout_below="@id/note_title_txt"
+        android:background="@drawable/gray_bordes"
+        android:layout_marginTop="16dp"
+        tools:ignore="Autofill" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delete note"
+        android:layout_below="@id/note_content_txt"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:id="@+id/deleteTextView"
+        android:visibility="gone"
+        />
+
+</RelativeLayout>
